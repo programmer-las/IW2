@@ -6,19 +6,19 @@ import java.util.Map;
 public class Runner {
 
     /**
-     * To find out digits are devided without remainder at divides in range from 1 to dividedMax
+     * Finding digits that are devided without remainder at divides in range from 1 to dividedMax
      * Знаходження чисел які діляться без залишку на дільники від 1 до dividedMax
      *
-     * In method main is initialised and filled out map dividerMap
+     * In the main method the dividerMap is initialised and filled out.
      * в методі проініціалізовано і заповнено мапу dividerMap
      *
-     * Keys map dividerMap are dividers
+     * Keys in map dividerMap are dividers
      * ключі map dividerMap є дільниками
      *
-     * Value map dividerMap are text to write if devided is devided at devider without remainder
+     * Values in map dividerMap is text that is logged if devided can be devided at devider without remainder
      * Значенням мапи dividerMap є текст, якиий виводиться в лог при дільник ділиться на ділене без залишку
      *
-     * Result is contained at class variable Multiple
+     * Result is contained in a feild listOfDividers in the class Multiple
      * Результат знаходиться у змінній listOfDividers класу Multiple
      */
     public static void main(String[] args) {
