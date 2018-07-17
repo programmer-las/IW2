@@ -17,10 +17,10 @@ import java.util.Map;
  *     public taskMultiple.Multiple()
  * </pre></blockquote><p>
  Second one {@link Multiple#Multiple} is used for getting multiples
- throw {@code getgetListOfDividers()} :
+ through {@code getListOfDividers()} :
  *<p>
  *     Є два контсруктори. Перший для ініціалізації об'єкту taskMultiple.Multiple,
- *     другий - для того, щоб отримати кратне з методу getgetListOfDividers()
+ *     другий - для того, щоб отримати кратне з методу getListOfDividers()
  *     <p>
  *
  */
@@ -88,7 +88,7 @@ public class Multiple {
      * @return true якщо цілі числа, які є ключами мапи dividerMap, є кратними числами
      */
     boolean isMultipleOfMapOfDeviders() {
-        boolean isPositivResult = false;
+        boolean isPositiveResult = false;
         StringBuilder logStringBuilder = new StringBuilder("");
         int countKeys = 1;
         for (Map.Entry a : dividerMap.entrySet()) {
@@ -96,14 +96,14 @@ public class Multiple {
             if (isMultiple()) {
                 logStringBuilder.append(a.getValue());
                 this.listOfDividers.add(divided);
-                isPositivResult = true;
+                isPositiveResult = true;
             }
-            if ((countKeys == dividerMap.size()) && (isPositivResult)) {
+            if ((countKeys == dividerMap.size()) && (isPositiveResult)) {
                 localLogDebug.debug("For " + divided + " - " + logStringBuilder);
             }
             countKeys += 1;
         }
-        return isPositivResult;
+        return isPositiveResult;
     }
 
     /**
