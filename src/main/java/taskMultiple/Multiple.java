@@ -9,18 +9,18 @@ import java.util.Map;
 /**
  * The {@code taskMultiple.Multiple} class provides <b>5</b> methods to get multiples
  * of integer digits {@code dividerMap} and {@code dididerMax}.
- * <p> Клас multiple дає 5 методів щоб отримати кратні цілих чисел dividerMap and dididerMax
+ * <p> Клас multiple має 5 методів щоб отримати кратні цілих чисел dividerMap and dididerMax
  *
  *
- * There are two constructor. First of them is used for initializing instance of {@link Multiple#Multiple()}:
+ * There are two constructors. First one is used for initializing an instance of {@link Multiple#Multiple()}:
  * <blockquote><pre>
  *     public taskMultiple.Multiple()
  * </pre></blockquote><p>
- Second one {@link Multiple#Multiple} for getting multiples
+ Second one {@link Multiple#Multiple} is used for getting multiples
  throw {@code getgetListOfDividers()} :
  *<p>
  *     Є два контсруктори. Перший для ініціалізації об'єкту taskMultiple.Multiple,
- *     друний - для того щоб отримати кратне з методу getgetListOfDividers()
+ *     другий - для того, щоб отримати кратне з методу getgetListOfDividers()
  *     <p>
  *
  */
@@ -41,7 +41,7 @@ public class Multiple {
     private int divider;
 
     /**
-     * listOfDividers contains all digits are divided at Integer amount dividerMap without remainder
+     * listOfDividers contains all digits that can be divided at Integer amount dividerMap without remainder
      * listOfDividers містить всі числа, які діляться без залишку на цілі з ліста dividerMap
      */
     private List<Integer> listOfDividers = new ArrayList<>();
@@ -82,9 +82,9 @@ public class Multiple {
     }
 
     /**
-     * Method isMultipleOfMapOfDeviders checks if Integer of Keys of map dividerMap are multiples
+     * Method isMultipleOfMapOfDeviders checks if Integers that are Keys of map dividerMap are multiples
      * Method isMultipleOfMapOfDeviders перевіряє, чи цілі числа, які є ключами мапи dividerMap є кратними числами
-     * @return true if Integer of Keys of map dividerMap are multiples
+     * @return true if Integers that are Keys of map dividerMap are multiples
      * @return true якщо цілі числа, які є ключами мапи dividerMap, є кратними числами
      */
     boolean isMultipleOfMapOfDeviders() {
@@ -107,7 +107,7 @@ public class Multiple {
     }
 
     /**
-     * isMultiple checks if divided divides at divider without remainder
+     * isMultiple checks if divided can be divided at divider without remainder
      * isMultiple перевіряє чи делене ділиться на дільник без залишку
      * @return true if divided divides at divider without remainder
      * @return true if делене ділиться на дільник без залишку
@@ -117,7 +117,7 @@ public class Multiple {
     }
 
     /**
-     * remainder find out remainder of divided divides at divider
+     * remainder() finds the remainder of divided divided at divider
      * remainder знаходить залишоk divided поділеного на divider
      * @return remainder of operation divided / divider
      * @return залишок операції divided / divider
