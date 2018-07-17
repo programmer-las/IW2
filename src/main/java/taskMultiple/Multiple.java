@@ -22,8 +22,6 @@ import java.util.Map;
  *     Є два контсруктори. Перший для ініціалізації об'єкту taskMultiple.Multiple,
  *     друний - для того щоб отримати кратне з методу getgetListOfDividers()
  *     <p>
- *  Написано на основі:
- *   @see     java.lang.String
  *
  */
 public class Multiple {
@@ -133,22 +131,42 @@ public class Multiple {
         }
     }
 
+    /**
+     * Set map dividers
+     * встановлення мапи дільників
+     */
     public void setDividerMap(Map<Integer, String> dividerMap) {
         this.dividerMap = dividerMap;
     }
 
+    /**
+     * Set maximum of divided
+     * встановлення максимально значення дільника
+     */
     public void setDividedMax(int dividedMax) {
         this.dividedMax = dividedMax;
     }
 
+    /**
+     * Set divided
+     * встановлення значення діленого
+     */
     public void setDivided(int divided) {
         this.divided = divided;
     }
 
+    /**
+     * Set divider
+     * встановлення значення дільника
+     */
     public void setDivider(int divider) {
         this.divider = divider;
     }
 
+    /*
+     * Getting list of devidedes are devided at deviders of DividerMap without remainder
+     * Отримання ліста дільників, які ділиться на ділені DividerMap без залишку
+     */
     public List<Integer> getListOfDividers() {
         return listOfDividers;
     }

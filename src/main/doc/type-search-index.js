@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"taskMultiple","l":"Multiple"},{"p":"taskMultiple","l":"MultipleTest"},{"p":"taskMultiple","l":"Runner"}]
