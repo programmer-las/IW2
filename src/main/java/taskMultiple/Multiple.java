@@ -17,10 +17,10 @@ import java.util.Map;
  *     public taskMultiple.Multiple()
  * </pre></blockquote><p>
  Second one {@link Multiple#Multiple} for getting multiples
- throw {@code getListOfMultipleIntegers()} :
+ throw {@code getgetListOfDividers()} :
  *<p>
  *     Є два контсруктори. Перший для ініціалізації об'єкту taskMultiple.Multiple,
- *     друний - для того щоб отримати кратне з методу getListOfMultipleIntegers()
+ *     друний - для того щоб отримати кратне з методу getgetListOfDividers()
  *     <p>
  *  Написано на основі:
  *   @see     java.lang.String
@@ -30,8 +30,8 @@ public class Multiple {
 
     /**
      * logger is used for TRACE
-     * localLogDebug for logging in {@link Multiple#isMultipleOfMap()}
-     * localLogError for logging exception in {@link Multiple#multiple()}}
+     * localLogDebug for logging in {@link Multiple#isMultipleOfMapOfDeviders()} ()}
+     * localLogError for logging exception in {@link Multiple#remainder()}}
      */
     final static Logger logger = Logger.getLogger(Multiple.class);
     final static Logger localLogDebug = Logger.getLogger("logDebug");
@@ -43,15 +43,15 @@ public class Multiple {
     private int divider;
 
     /**
-     * listOfMultipleIntegers contains all digits are divided at Integer amount dividerMap without remainder
-     * listOfMultipleIntegers містить всі числа, які діляться без залишку на цілі з ліста dividerMap
+     * listOfDividers contains all digits are divided at Integer amount dividerMap without remainder
+     * listOfDividers містить всі числа, які діляться без залишку на цілі з ліста dividerMap
      */
-    private List<Integer> listOfMultipleIntegers = new ArrayList<>();
+    private List<Integer> listOfDividers = new ArrayList<>();
 
     /**
      * Default constructor
      */
-    public Multiple() {
+    Multiple() {
         localLogDebug.debug("Run taskMultiple.Multiple()");
     }
 
@@ -62,7 +62,7 @@ public class Multiple {
      * @param dividerMap map of {@code Integer} deviders
      * @param dividerMap мапа цілих дільників
      */
-    public Multiple(Map<Integer, String> dividerMap, int dividedMax) {
+    Multiple(Map<Integer, String> dividerMap, int dividedMax) {
         this.dividedMax = dividedMax;
         this.dividerMap = dividerMap;
         localLogDebug.debug("Run taskMultiple.Multiple(Map<Integer, String> dividerMap ,int dividedMax)");
@@ -73,10 +73,10 @@ public class Multiple {
      * Define basic method to find multiples
      * задає основний метод пошуку кратних
      */
-    public void multipleFrom1ToN() {
+    void multipleFrom1ToN() {
         for (int i = 1; i <= dividedMax; i++) {
             this.divided = i;
-            isMultipleOfMap();
+            isMultipleOfMapOfDeviders();
             if (i == dividedMax) {
                 localLogDebug.debug("Max iterration(s) of circle is/are " + i);
             }
@@ -84,12 +84,12 @@ public class Multiple {
     }
 
     /**
-     * Method isMultipleOfMap checks if Integer of Keys of map dividerMap are multiples
-     * Method isMultipleOfMap перевіряє, чи цілі числа, які є ключами мапи dividerMap є кратними числами
+     * Method isMultipleOfMapOfDeviders checks if Integer of Keys of map dividerMap are multiples
+     * Method isMultipleOfMapOfDeviders перевіряє, чи цілі числа, які є ключами мапи dividerMap є кратними числами
      * @return true if Integer of Keys of map dividerMap are multiples
      * @return true якщо цілі числа, які є ключами мапи dividerMap, є кратними числами
      */
-    public boolean isMultipleOfMap() {
+    boolean isMultipleOfMapOfDeviders() {
         boolean isPositivResult = false;
         StringBuilder logStringBuilder = new StringBuilder("");
         int countKeys = 1;
@@ -97,7 +97,7 @@ public class Multiple {
             this.divider = (int) a.getKey();
             if (isMultiple()) {
                 logStringBuilder.append(a.getValue());
-                this.listOfMultipleIntegers.add(divided);
+                this.listOfDividers.add(divided);
                 isPositivResult = true;
             }
             if ((countKeys == dividerMap.size()) && (isPositivResult)) {
@@ -114,17 +114,17 @@ public class Multiple {
      * @return true if divided divides at divider without remainder
      * @return true if делене ділиться на дільник без залишку
      */
-    public boolean isMultiple() {
-        return multiple() == 0 ? true : false;
+    boolean isMultiple() {
+        return remainder() == 0 ? true : false;
     }
 
     /**
-     * multiple find out remainder of divided divides at divider
-     * multiple знаходить залишо divided поділеного на divider
+     * remainder find out remainder of divided divides at divider
+     * remainder знаходить залишоk divided поділеного на divider
      * @return remainder of operation divided / divider
      * @return залишок операції divided / divider
      */
-    int multiple() {
+    int remainder() {
         try {
             return divided % divider;
         } catch (ArithmeticException ex) {
@@ -149,7 +149,7 @@ public class Multiple {
         this.divider = divider;
     }
 
-    public List<Integer> getListOfMultipleIntegers() {
-        return listOfMultipleIntegers;
+    public List<Integer> getListOfDividers() {
+        return listOfDividers;
     }
 }

@@ -3,7 +3,6 @@ package taskMultiple;
 import java.util.*;
 
 import org.junit.Test;
-import taskMultiple.Multiple;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
@@ -15,12 +14,12 @@ public class MultipleTest {
      * test 15/5
      */
     @Test
-    public void multiple() {
+    public void remainder() {
 
         Multiple multiple = new Multiple();
         multiple.setDivided(15);
         multiple.setDivider(5);
-        int actual = multiple.multiple();
+        int actual = multiple.remainder();
         int expected = 0;
         assertEquals(actual, expected);
     }
@@ -29,13 +28,13 @@ public class MultipleTest {
      * test divided/0
      */
     @Test
-    public void Multiple2() {
+    public void remainder2() {
         Multiple multiple = new Multiple();
         int actual = 0;
         multiple.setDivided(5);
         multiple.setDivider(0);
         try {
-            actual = multiple.multiple();
+            actual = multiple.remainder();
         } catch (ArithmeticException e) {
             e.printStackTrace();
         } finally {
@@ -48,11 +47,11 @@ public class MultipleTest {
      * test 0/divider
      */
     @Test
-    public void Multiple4() {
+    public void remainder3() {
         Multiple multiple = new Multiple();
         multiple.setDivided(0);
         multiple.setDivider(5);
-        int actual = multiple.multiple();
+        int actual = multiple.remainder();
         int expected = 0;
         assertEquals(expected, actual);
     }
@@ -86,7 +85,7 @@ public class MultipleTest {
         multiple.setDividerMap(dividerMap);
         multiple.setDividedMax(15);
         multiple.multipleFrom1ToN();
-        List<Integer> actual = multiple.getListOfMultipleIntegers();
+        List<Integer> actual = multiple.getListOfDividers();
         List<Integer> expected = Arrays.asList(3, 5, 6, 9, 10, 12, 15, 15);
         assertEquals(expected, actual);
     }
