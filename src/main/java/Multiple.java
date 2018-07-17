@@ -29,15 +29,12 @@ public class Multiple {
         this.dividerMap = dividerMap;
         localLogDebug.debug("Run Multiple(Map<Integer, String> dividerMap ,int dividedMax)");
         multipleFrom1ToN();
-//        multipleFrom1ToN(dividedMax, dividerMap);
     }
 
     public void multipleFrom1ToN() {
-//    public void multipleFrom1ToN(int dividedMax, Map<Integer, String> dividerMap) {
         for (int i = 1; i <= dividedMax; i++) {
             this.divided = i;
             multipleOfMap();
-//            multipleOfMap(divided, dividerMap);
             if (i == dividedMax) {
                 localLogDebug.debug("Max iterration(s) of circle is/are " + i);
             }
@@ -45,14 +42,12 @@ public class Multiple {
     }
 
     public boolean multipleOfMap() {
-//    public boolean multipleOfMap(int divided, Map<Integer, String> dividerMap) {
         boolean isPositivResult = false;
         StringBuilder logStringBuilder = new StringBuilder("");
         int countKeys = 1;
         for (Map.Entry a : dividerMap.entrySet()) {
             this.divider = (int) a.getKey();
             if (isMultiple()) {
-//            if (isMultiple(divided, divider)) {
                 logStringBuilder.append(a.getValue());
                 this.listOfMultipleIntegers.add(divided);
                 isPositivResult = true;
@@ -67,8 +62,6 @@ public class Multiple {
     }
 
     public boolean isMultiple() {
-//    public boolean isMultiple(int divided, int divider) {
-//        return multiple(divided, divider) == 0 ? true : false;
         return multiple() == 0 ? true : false;
     }
 
@@ -76,7 +69,6 @@ public class Multiple {
      * @return multiple as result of operation divided / divider
      */
     int multiple() {
-//    int multiple(int divided, int divider) {
         try {
             return divided % divider;
         } catch (ArithmeticException ex) {

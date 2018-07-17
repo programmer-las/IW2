@@ -1,8 +1,7 @@
-import junit.framework.Assert;
-import org.junit.Test;
 
 import java.util.*;
 
+import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.Assert.assertTrue;
@@ -18,7 +17,6 @@ public class MultipleTest {
         Multiple multiple = new Multiple();
         multiple.setDivided(15);
         multiple.setDivider(5);
-//        int actual = multiple.multiple(15,5);
         int actual = multiple.multiple();
         int expected = 0;
         assertEquals(actual, expected);
@@ -34,7 +32,6 @@ public class MultipleTest {
         multiple.setDivided(5);
         multiple.setDivider(0);
         try {
-//            actual = multiple.multiple(5,0);
             actual = multiple.multiple();
         } catch (ArithmeticException e) {
             e.printStackTrace();
@@ -52,7 +49,6 @@ public class MultipleTest {
         Multiple multiple = new Multiple();
         multiple.setDivided(0);
         multiple.setDivider(5);
-//            int actual = multiple.multiple(0,5);
         int actual = multiple.multiple();
         int expected = 0;
         assertEquals(expected, actual);
